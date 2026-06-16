@@ -79,8 +79,12 @@ WSGI_APPLICATION = 'GroFul.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'aforro_db',
+        'USER': 'postgres',
+        'PASSWORD': 'postgrespassword',
+        'HOST': 'db', # Important: Points to the Docker service name
+        'PORT': '5432',
     }
 }
 
